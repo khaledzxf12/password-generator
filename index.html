@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h2>Password Generator</h2>
+      <button id="theme-toggle" class="theme-btn">🌙</button>
+    </div>
+
+    <div class="result-container">
+      <input type="text" id="password" readonly placeholder="Click generate">
+      <button id="copy-btn">Copy</button>
+    </div>
+
+    <div class="strength-container">
+      <div class="strength-header">
+        <span>Strength:</span>
+        <span id="strength-text">-</span>
+      </div>
+      <div class="bars">
+        <div class="bar" id="bar-1"></div>
+        <div class="bar" id="bar-2"></div>
+        <div class="bar" id="bar-3"></div>
+      </div>
+    </div>
+
+    <div class="options">
+      <div class="option-row">
+        <label for="length">Length: <span id="length-val">12</span></label>
+        <input type="range" id="length" min="4" max="32" value="12">
+      </div>
+      <div class="option-row">
+        <label><input type="checkbox" id="uppercase" checked> Uppercase (A-Z)</label>
+      </div>
+      <div class="option-row">
+        <label><input type="checkbox" id="lowercase" checked> Lowercase (a-z)</label>
+      </div>
+      <div class="option-row">
+        <label><input type="checkbox" id="numbers" checked> Numbers (0-9)</label>
+      </div>
+      <div class="option-row">
+        <label><input type="checkbox" id="symbols" checked> Symbols (!@#$)</label>
+      </div>
+    </div>
+
+    <button id="generate-btn" class="gen-btn">Generate Password</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
